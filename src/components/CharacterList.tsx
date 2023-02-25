@@ -5,7 +5,7 @@ import { Character } from './Character';
 export const CharacterList = ({characters = []}:any) => {
    
   return (
-   <View style={{height:"100%"}}>
+   <View style={{height:"100%" }}>
      <FlatList data={characters} renderItem={(character:any) =>(
         
         <View key={character?.id}>

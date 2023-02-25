@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 export function useFetch(url=""){
@@ -13,9 +14,11 @@ export function useFetch(url=""){
             ...state,
             isLoading: true
         });
-
+/* 
         const resp = await fetch(url);
-        const data = await resp.json();
+        const data = await resp.json(); */
+
+        const {data} = await axios.get(url)
 
         setState({
             data,
